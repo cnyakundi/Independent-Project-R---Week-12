@@ -58,7 +58,7 @@ head(df)
 ```{r}
 # Lets Identify missing data in your dataset
 
-is.na(df)
+print(is.na(df))
 
 
 ```
@@ -66,14 +66,14 @@ is.na(df)
 # Checking missing values
 ```{r}
 
-colSums(is.na(df))
+print(colSums(is.na(df)))
 
 ```
 # Dimensions of our data
 
 
 ```{r}
-dim(df)
+print(dim(df))
 ```
 
 # Getting the names of our rows
@@ -85,15 +85,32 @@ rownames(data)
 
 
 ```{r}
-colnames(df)
+print(colnames(df))
 ```
+# UNIVARIATE DATA ANALYSIS
+
+
 ```{r}
+#  Measures of Central Tendency
+mean_income <- mean(df$Area.Income)
+
+print(mean_income)
 
 ```
 ```{r}
 
+# Mean daily internet usage
+mean_daily_internet <- mean(df$Daily.Internet.Usage)
+
+print(mean_daily_internet)
+
+
 ```
 ```{r}
+mean_time_spent_on_site <- mean(df$Daily.Time.Spent.on.Site)
+
+print(mean_time_spent_on_site)
+
 
 ```
 ```{r}

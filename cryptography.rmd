@@ -114,7 +114,108 @@ print(mean_time_spent_on_site)
 
 ```
 ```{r}
+# Mean daily internet usage
+median_daily_internet <- median(df$Daily.Internet.Usage)
 
+print(median_daily_internet)
+```
+```{r}
+
+min_time_spent_on_site <- min(df$Daily.Time.Spent.on.Site)
+
+print(min_time_spent_on_site)
+
+```
+```{r}
+
+max_daily_internet <- max(df$Daily.Internet.Usage)
+
+print(max_daily_internet)
+
+```
+```{r}
+
+#Quantile time spent on site
+quantile_time <- quantile(df$Daily.Time.Spent.on.Site)
+
+print(quantile_time)
+
+
+```
+```{r}
+# Find the variance of the distance using the var() function as shown below
+
+variance_daily_internet_usage <- var(df$Daily.Internet.Usage)
+
+print(variance_daily_internet_usage)
+
+```
+```{r}
+#Standard deviation of age
+
+std_daily_internet_usage_age <- sd(df$Daily.Internet.Usage)
+
+print(std_daily_internet_usage_age)
+```
+```{r}
+daily_internet_usage_frequency <- table(df$Daily.Internet.Usage)
+
+daily_internet_usage_frequency
+```
+```{r}
+
+# Then applying the barplot function to produce its bar graph
+
+barplot(daily_internet_usage_frequency)
+
+```
+
+# Bivariate and Multivariate
+
+
+
+```{r}
+#### Covariance
+
+age <- df$Age
+internet_usage_frequency <- df$Daily.Internet.Usage
+
+cov(age,internet_usage_frequency)
+
+
+```
+```{r}
+
+daily_internet_usage <- df$Daily.Internet.Usage
+
+area_income <- df$Area.Income
+
+cov(daily_internet_usage,area_income)
+
+```
+```{r}
+
+# Correlation Coefficient
+
+city <- df$City
+
+state <- df$State
+
+cor(city,state )
+
+
+
+```
+```{r}
+
+# There is a very low correlation
+cor(daily_internet_usage,area_income)
+```
+```{r}
+# Creating the scatter plot using eruptions and waiting
+# ---
+#
+plot(daily_internet_usage, area_income, xlab="Daily Internet Usage", ylab="Area Income")
 ```
 ```{r}
 

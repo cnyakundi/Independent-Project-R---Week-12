@@ -17,9 +17,92 @@ The code chunk appears:
 
 Type any R code in the chunk, for example:
 ```{r}
-mycars <- within(mtcars, { cyl <- ordered(cyl) })
-mycars
+
 ```
 
 Now, click the **Run** button on the chunk toolbar to [execute](https://www.jetbrains.com/help/pycharm/r-markdown.html#run-r-code) the chunk code. The result should be placed under the chunk.
+
+
+
+```{r}
+```
+# Installing the packages
+
+
+```{r}
+
+install.packages("data.table")        # install it
+library(data.table)
+install.packages("dplyr")
+library(dplyr)
+library(tidyr)
+```
+
+# Loading and previewing our dataset
+
+```{r}
+
+df <- read.csv("./advertising (1).csv")
+
+```
+
+# Previewing the six top rows in our dataset
+```{r}
+# We use the head(df) to preview the first 6 rows of our dataset
+head(df)
+```
+
+
+# Handling Missing Data with R
+
+```{r}
+# Lets Identify missing data in your dataset
+
+is.na(df)
+
+
+```
+
+# Checking missing values
+```{r}
+
+colSums(is.na(df))
+
+```
+# Dimensions of our data
+
+
+```{r}
+dim(df)
+```
+
+# Getting the names of our rows
+```{r}
+data <- df
+rownames(data)
+```
+# Getting the column names of our dataset
+
+
+```{r}
+colnames(df)
+```
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
 Click the **Knit and Open Document** to build and preview an output.
